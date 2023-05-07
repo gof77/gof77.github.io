@@ -7,7 +7,7 @@ metadata:
   pathPrefix: "/"
   siteImage:
   favicon: "/assets/GofFavicon32.png"
-  themeColor: "#ff0000"
+  themeColor: "#37474F"
 header:
   enabled: true
   logo: "/assets/GoFwobg96.png"
@@ -24,8 +24,8 @@ header:
       link: "/"
       external: false
       submenus:
-        - text: KICS
-          link: "/"
+        - text: Kics
+          link: https://gof77.github.io/kics
         - text: IFRS17
           link: https://gof77.github.io/ifrs
         - text: GESG
@@ -80,7 +80,7 @@ pwa:
   manifest:
     display: standalone
     crossOrigin: anonymous
-    icon: "/assets/GofFavicon32.png"
+    icon: "/assets/GoF144.png"
 
 social:
   github: 
