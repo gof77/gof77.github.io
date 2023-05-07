@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Dropdown from './Dropdown';
 import { Link } from '../';
+import { onMobile, onTablet, isMobile, isNormal } from '../../styles/responsive';
 
 const MenuItem = ({ items, depthLevel }) => {
   const [dropdown, setDropdown] = useState(false);
+  // const isNormal = {isNormal};
+  // const isMobile = {isMobile};
 
   let ref = useRef();
 
@@ -27,11 +30,11 @@ const MenuItem = ({ items, depthLevel }) => {
   }, [dropdown]);
 
   const onMouseEnter = () => {
-    window.innerWidth > 960 && setDropdown(true);
+    isNormal()  && setDropdown(true);
   };
 
   const onMouseLeave = () => {
-    window.innerWidth > 960 && setDropdown(false);
+    isNormal() && setDropdown(false);
   };
 
   const closeDropdown = () => {
@@ -54,15 +57,14 @@ const MenuItem = ({ items, depthLevel }) => {
             aria-expanded={dropdown ? 'true' : 'false'}
             onClick={() => setDropdown((prev) => !prev)}
           >
-            {window.innerWidth < 960 && depthLevel === 0 ? (
+            { isMobile()  && depthLevel === 0 ? (
               items.text
             ) : (
               <Link to={items.link}>{items.text}</Link>
             )}
 
-            {depthLevel > 0 &&
-            window.innerWidth < 960 ? null : depthLevel > 0 &&
-              window.innerWidth > 960 ? (
+            {depthLevel > 0 &&  isMobile() ? null : 
+              depthLevel > 0 &&  isNormal() ? (
               <span>&raquo;</span>
             ) : (
               <span className="arrow" />
