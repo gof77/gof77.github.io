@@ -15,7 +15,7 @@ header:
   helpUrl: ""
   links:
     - text: Gbook
-      link:  https://gof77.github.io/gbook
+      link:  https://gof77.github.io
       external: false
     - text: IFRS
       link: https://gof77.github.io/ifrs
@@ -48,11 +48,11 @@ sidebar:
   #  - "/configuration/setting-up"
   groups:
     - order: 1
-      path: "/01-intro"
-      title: ":rocket: I.총칙"
+      path: "/Notice"
+      title: ":rocket: Notice"
     - order: 2
-      path: "/02-valuation"
-      title: ":wrench: II.공정가치 평가"
+      path: "/Blog"
+      title: ":wrench: Blog"
     - order: 3
       path: "/03-ac"
       title: ":writing_hand: III.지급여력금액"
