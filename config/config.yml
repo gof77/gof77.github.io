@@ -30,6 +30,14 @@ header:
           link: https://gof77.github.io/ifrs
         - text: GESG
           link: https://gof77.github.io/gesg
+    - text: Solutions
+      link: "/"
+      external: false
+      submenus:
+        - text: GMV
+          link: https://gof77.github.io/ifrs
+        - text: GESG
+          link: https://gof77.github.io/gesg
 sidebar:
   enabled: true
   #forcedNavOrder:
